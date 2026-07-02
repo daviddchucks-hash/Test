@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to ChatGPT</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .card{
+      background:#fff;
+      width:90%;
+      max-width:500px;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    img{
+      width:120px;
+      border-radius:10px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      color:#10a37f;
+      margin-bottom:15px;
+    }
+
+    p{
+      color:#555;
+      line-height:1.6;
+      margin-bottom:20px;
+    }
+
+    a{
+      display:inline-block;
+      padding:12px 24px;
+      background:#10a37f;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+    }
+
+    a:hover{
+      background:#0d8b6b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="chatgpt.png" alt="ChatGPT Logo">
+
+    <h1>Welcome to ChatGPT</h1>
+
+    <p>
+      ChatGPT is an AI assistant created by OpenAI. It can answer questions,
+      help with coding, write content, explain difficult topics, and assist
+      with many everyday tasks.
+    </p>
+
+    <a href="https://chatgpt.com" target="_blank">Visit ChatGPT</a>
+  </div>
+
+</body>
+</html>
