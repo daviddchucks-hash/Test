@@ -105,6 +105,10 @@ button:hover{
 </div>
 
 <script>
+if (sessionStorage.getItem("authenticated") !== "true") {
+    window.location.href = "index.html";
+}
+
 
 const correctPassword = "Drexora2026";
 
@@ -113,8 +117,10 @@ function login(){
 const pass = document.getElementById("password").value;
 
 if(pass === correctPassword){
+  sessionStorage.setItem("authenticated", "true");
+window.location.href = "home.html";
 
-window.location.href="home.html";
+
 
 }else{
 
