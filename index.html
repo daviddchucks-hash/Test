@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Access</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+}
+
+.container{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    padding:35px;
+    border-radius:15px;
+    width:320px;
+    text-align:center;
+    color:white;
+}
+
+.lock{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+.input-box{
+    position:relative;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.toggle{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:black;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#22c55e;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16a34a;
+}
+
+#error{
+    color:#ffb3b3;
+    margin-top:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="lock">🔒</div>
+
+<h2>Protected Page</h2>
+
+<div class="input-box">
+<input type="password" id="password" placeholder="Enter Password">
+<span class="toggle" onclick="togglePassword()">👁️</span>
+</div>
+
+<button onclick="login()">Unlock</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+const correctPassword = "Drexora2026";
+
+function login(){
+
+const pass = document.getElementById("password").value;
+
+if(pass === correctPassword){
+
+window.location.href="home.html";
+
+}else{
+
+document.getElementById("error").innerHTML="Wrong password!";
+
+}
+
+}
+
+function togglePassword(){
+
+const input=document.getElementById("password");
+
+if(input.type==="password"){
+
+input.type="text";
+
+}else{
+
+input.type="password";
+
+}
+
+}
+
+document.getElementById("password").addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+login();
+
+}
+
+});
+
+</script>
+
+</body>
+                    </html>
