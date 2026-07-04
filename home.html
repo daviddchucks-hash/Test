@@ -18,6 +18,17 @@ if (sessionStorage.getItem("authenticated") !== "true") {
       box-sizing:border-box;
       font-family:Arial, sans-serif;
     }
+    header{
+    position: fixed; /* Keeps it at the top while scrolling */
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.logo{
+    width: 60px;      /* Change size if needed */
+    height: auto;
+}
 
     body{
       background:black;
@@ -146,6 +157,11 @@ if (sessionStorage.getItem("authenticated") !== "true") {
     }
   </style>
 </head>
+
+<header>
+  <img src="file_000000009ab87246b2a577784deb7f1c.webp" alt="Logo" class="logo">
+</header>
+
 <body>
 
   <div class="card">
